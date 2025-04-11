@@ -1,7 +1,7 @@
 {
   "name": "petshop-react",
   "version": "0.1.0",
-  "homepage": "https://jhontan200.github.io/PetshopPrueba",
+  "homepage": "https://jhontan200.github.io/PetshopPrueba/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
