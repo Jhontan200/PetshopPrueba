@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop/Accesorios_para_Gatos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="PetShop Logo">
+                </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <img src="imagenes/buscar.png" alt="Ícono de búsqueda" class="search-image">
+            </div>
+            <div class="actions">
+                <div class="login">
+                    <img src="imagenes/icons8-usuario-100.png" alt="Iniciar Sesión">
+                    <span>Iniciar sesión</span>
+                </div>
+                <div class="cart">
+                    <img src="imagenes/icons8-carrito-de-compras-100.png" alt="Carrito">
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="menu-container">
+                <div class="menu-button">≡</div>
+                <ul class="menu">
+                    <li>
+                        <a href="perros.html">Perros</a>
+                    </li>
+                    <li>
+                        <a href="gatos.html">Gatos</a>
+                    </li>
+                    <li>
+                        <a href="roedores.html">Roedores</a>
+                    </li>
+                    <li>
+                        <a href="aves.html">Aves</a>
+                    </li>
+                    <li>
+                        <a href="peces.html">Peces</a>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li class="categorias">
+                    <div class="menu-container1">
+                        <div class="menu-button">CATEGORÍAS</div>
+                        <ul class="menu">
+                            <li>
+                                <a href="perros.html">Perros</a>
+                            </li>
+                            <li>
+                                <a href="gatos.html">Gatos</a>
+                            </li>
+                            <li>
+                                <a href="roedores.html">Roedores</a>
+                            </li>
+                            <li>
+                                <a href="aves.html">Aves</a>
+                            </li>
+                            <li>
+                                <a href="peces.html">Peces</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fondo-menu menu1"><a href="index.html">INICIO</a></li>
+                <li class="menu1"><a href="perros.html">PERROS</a></li>
+                <li class="menu1"><a href="gatos.html">GATOS</a></li>
+                <li class="menu1"><a href="roedores.html">ROEDORES</a></li>
+                <li class="menu1"><a href="aves.html">AVES</a></li>
+                <li class="menu1"><a href="peces.html">PECES</a></li>
+            </ul>
+        </nav>
+        <section class="contenido">
+
+            <!-- Indicador de ubicación (Breadcrumb) -->
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> /
+                <a href="gatos.html">Gatos</a> /
+                <span class="activo">Accesorios</span>
+            </div>
+
+            <!-- Título de la categoría -->
+            <h1 class="titulo-categoria">Accesorios para Gatos</h1>
+            <!-- Botón para abrir filtros en pantallas pequeñas -->
+            <button class="boton-filtros">Filtros</button>
+
+
+            <!-- Aquí comienza el contenido que incluye filtros y catálogo -->
+            <div class="contenedor">
+                <!-- Filtros -->
+                <aside class="filtros">
+                    <button class="cerrar-filtros">✖</button>
+
+                    <!-- Sub-Categoría -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Sub-Categoría <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Juguetes">Juguetes</label><br>
+                        <label><input type="checkbox" class="filtro" value="Accesorios"> Accesorios</label><br>
+                    </div>
+
+                    <!-- Botones adicionales -->
+                    <button class="limpiar-filtros">Eliminar selección</button>
+                    <button class="aplicar-filtros">Aplicar</button>
+                </aside>
+
+
+                <!-- Catálogo -->
+                <section class="catalogo">
+                    <div class="producto2" data-categoria="Juguetes">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG1_Juguete_Gato_Catnip.webp"
+                            alt="Juguete para Gato Catnip">
+                        <h3>Juguete para Gato Catnip</h3>
+                        <p>Bs. 75,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="0">-</button>
+                            <input type="text" class="cantidad-input" data-index="0" value="1" readonly>
+                            <button class="incrementar" data-index="0">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto2" data-categoria="Juguetes">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG2_Pelota_Sisal_Con_Plumas.webp"
+                            alt="Pelota Sisal con Plumas">
+                        <h3>Pelota Sisal con Plumas</h3>
+                        <p>Bs. 23,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="1">-</button>
+                            <input type="text" class="cantidad-input" data-index="1" value="1" readonly>
+                            <button class="incrementar" data-index="1">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Accesorios">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG3_Rascador_Tubo_Alfombra_Cascabel.webp"
+                            alt="Rascador Tubo Alfombra Cascabel">
+                        <h3>Rascador Tubo Alfombra Cascabel</h3>
+                        <p>Bs. 115,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="2">-</button>
+                            <input type="text" class="cantidad-input" data-index="2" value="1" readonly>
+                            <button class="incrementar" data-index="2">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Juguetes">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG4_Pelota_Inteligente_Beepaw_Speed-E.webp"
+                            alt="Pelota Inteligente Beepaw Speed-E">
+                        <h3>Pelota Inteligente Beepaw Speed-E</h3>
+                        <p>Bs. 155,20</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="3">-</button>
+                            <input type="text" class="cantidad-input" data-index="3" value="1" readonly>
+                            <button class="incrementar" data-index="3">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto2" data-categoria="Accesorios">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG5_Rascador_RB_Rueda_20cm.webp"
+                            alt="Rascador RB Rueda 20 cm">
+                        <h3>Rascador RB Rueda 20 cm</h3>
+                        <p>Bs. 45,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="4">-</button>
+                            <input type="text" class="cantidad-input" data-index="4" value="1" readonly>
+                            <button class="incrementar" data-index="4">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto7" data-categoria="Juguetes">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG6_Ratita_Hilo_Sisal_1_Unidad.webp"
+                            alt="Ratita Hilo Sisal">
+                        <h3>Ratita Hilo Sisal</h3>
+                        <p>Bs. 18,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="5">-</button>
+                            <input type="text" class="cantidad-input" data-index="5" value="1" readonly>
+                            <button class="incrementar" data-index="5">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto7" data-categoria="Juguetes">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG7_Puntero_Laser.webp"
+                            alt="Puntero Laser">
+                        <h3>Puntero Láser</h3>
+                        <p>Bs. 18,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="6">-</button>
+                            <input type="text" class="cantidad-input" data-index="6" value="1" readonly>
+                            <button class="incrementar" data-index="6">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto7" data-categoria="Accesorios">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG8_Casita_Iglu.webp"
+                            alt="Casita Iglú">
+                        <h3>Casita Iglú</h3>
+                        <p>Bs. 158,40</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="7">-</button>
+                            <input type="text" class="cantidad-input" data-index="7" value="1" readonly>
+                            <button class="incrementar" data-index="7">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Juguetes">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG9_Pelota_para_Gato_con_Cascabel.webp"
+                            alt="Pelota para Gato con Cascabel">
+                        <h3>Pelota para Gato con Cascabel</h3>
+                        <p>Bs. 17,10</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="8">-</button>
+                            <input type="text" class="cantidad-input" data-index="8" value="1" readonly>
+                            <button class="incrementar" data-index="8">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto7" data-categoria="Juguetes">
+                        <img src="imagenes/imagenes_accesorios_gatos/AccesorioG10_Langosta_10cm.webp"
+                            alt="Langosta 10 cm">
+                        <h3>Langosta 10 cm</h3>
+                        <p>Bs. 25,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="9">-</button>
+                            <input type="text" class="cantidad-input" data-index="9" value="1" readonly>
+                            <button class="incrementar" data-index="9">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="parent">
+            <div class="div1">
+                <div class="info">
+                    <h3 class="footer-title">UBICACIÓN</h3>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. Busch y Tercer Anillo </p>
+                    </div>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. America esq. Av Pando </p>
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <div class="info">
+                    <h3 class="footer-title">CONTACTANOS</h3>
+                    <p>Atención Telefónica</p>
+                    <p>(591) 54488474</p>
+                </div>
+            </div>
+            <div class="div3">
+                <div class="info">
+                    <h3 class="footer-title ayuda-title">AYUDA</h3>
+                    <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+                    <a href="terminos_condiciones.html">Términos y condiciones</a>
+                    <a href="politica_privacidad.html">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="div4">
+                <p>SÍGUENOS EN:</p>
+                <div class="imagenes-redes-sociales">
+                    <a href="https://www.facebook.com/people/Pet-Shop-Huellitas/100063562781781/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-facebook-48.png" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/petshop_huellitas/" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/icons8-instagram-48.png" alt="instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@petshophuellita?is_from_webapp=1&sender_device=pc" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-tiktok-48.png" alt="tiktok">
+                    </a>
+                </div>
+            </div>
+            <div class="div5">
+                <p>© Pet Shop - 2025</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+
+</html>

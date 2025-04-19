@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop/Farmacia_para_Perros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="PetShop Logo">
+                </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <img src="imagenes/buscar.png" alt="Ícono de búsqueda" class="search-image">
+            </div>
+            <div class="actions">
+                <div class="login">
+                    <img src="imagenes/icons8-usuario-100.png" alt="Iniciar Sesión">
+                    <span>Iniciar sesión</span>
+                </div>
+                <div class="cart">
+                    <img src="imagenes/icons8-carrito-de-compras-100.png" alt="Carrito">
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="menu-container">
+                <div class="menu-button">≡</div>
+                <ul class="menu">
+                    <li>
+                        <a href="perros.html">Perros</a>
+                    </li>
+                    <li>
+                        <a href="gatos.html">Gatos</a>
+                    </li>
+                    <li>
+                        <a href="roedores.html">Roedores</a>
+                    </li>
+                    <li>
+                        <a href="aves.html">Aves</a>
+                    </li>
+                    <li>
+                        <a href="peces.html">Peces</a>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li class="categorias">
+                    <div class="menu-container1">
+                        <div class="menu-button">CATEGORÍAS</div>
+                        <ul class="menu">
+                            <li>
+                                <a href="perros.html">Perros</a>
+                            </li>
+                            <li>
+                                <a href="gatos.html">Gatos</a>
+                            </li>
+                            <li>
+                                <a href="roedores.html">Roedores</a>
+                            </li>
+                            <li>
+                                <a href="aves.html">Aves</a>
+                            </li>
+                            <li>
+                                <a href="peces.html">Peces</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fondo-menu menu1"><a href="index.html">INICIO</a></li>
+                <li class="menu1"><a href="perros.html">PERROS</a></li>
+                <li class="menu1"><a href="gatos.html">GATOS</a></li>
+                <li class="menu1"><a href="roedores.html">ROEDORES</a></li>
+                <li class="menu1"><a href="aves.html">AVES</a></li>
+                <li class="menu1"><a href="peces.html">PECES</a></li>
+            </ul>
+        </nav>
+        <section class="contenido">
+
+            <!-- Indicador de ubicación (Breadcrumb) -->
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> /
+                <a href="perros.html">Perros</a> /
+                <span class="activo">Farmacia</span>
+            </div>
+
+            <!-- Título de la categoría -->
+            <h1 class="titulo-categoria">Farmacia para Perros</h1>
+            <!-- Botón para abrir filtros en pantallas pequeñas -->
+            <button class="boton-filtros">Filtros</button>
+
+
+            <!-- Aquí comienza el contenido que incluye filtros y catálogo -->
+            <div class="contenedor">
+                <!-- Filtros -->
+                <aside class="filtros">
+                    <button class="cerrar-filtros">✖</button>
+
+                    <!-- Sub-Categoría -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Sub-Categoría <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Pipetas">Pipetas</label><br>
+                        <label><input type="checkbox" class="filtro" value="Pastillas"> Pastillas</label><br>
+                    </div>
+
+                    <!-- Filtrar por Edad -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Filtrar por Edad <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Adulto"> Adulto</label><br>
+                        <label><input type="checkbox" class="filtro" value="Senior"> Senior</label><br>
+                    </div>
+
+                    <!-- Botones adicionales -->
+                    <button class="limpiar-filtros">Eliminar selección</button>
+                    <button class="aplicar-filtros">Aplicar</button>
+                </aside>
+
+
+                <!-- Catálogo -->
+                <section class="catalogo">
+                    <div class="producto" data-categoria="Pipetas" data-edad="Adulto">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia1_Pipeta_Perro_Power_Ultra_De_11_a_20kg.webp"
+                            alt="Pipeta Perro Power Ultra de 11 a 20 kg">
+                        <h3>Pipeta Perro Power Ultra de 11 a 20 kg</h3>
+                        <p>Bs. 35,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="0">-</button>
+                            <input type="text" class="cantidad-input" data-index="0" value="1" readonly>
+                            <button class="incrementar" data-index="0">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Pastillas" data-edad="Adulto">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia2_Pastilla_Simparica_10_a_20kg.webp"
+                            alt="Pastilla Simparica 10 a 20 kg">
+                        <h3>Pastilla Simpárica 10 a 20 kg</h3>
+                        <p>Bs. 85,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="1">-</button>
+                            <input type="text" class="cantidad-input" data-index="1" value="1" readonly>
+                            <button class="incrementar" data-index="1">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Pipetas" data-edad="Senior">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia3_Pipeta_Perro_Power_Ultra_De_2_a_4kg.webp"
+                            alt="Pipeta Perro Power Ultra de 2 a 4 kg">
+                        <h3>Pipeta Perro Power Ultra de 2 a 4 kg</h3>
+                        <p>Bs. 38,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="2">-</button>
+                            <input type="text" class="cantidad-input" data-index="2" value="1" readonly>
+                            <button class="incrementar" data-index="2">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Pipetas" data-edad="Adulto">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia4_Pipeta_Perro_Power_Ultra_De_41_a_60Kg.webp"
+                            alt="Pipeta Perro Power Ultra de 41 a 60 Kg">
+                        <h3>Pipeta Perro Power Ultra de 41 a 60 Kg</h3>
+                        <p>Bs. 51,20</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="3">-</button>
+                            <input type="text" class="cantidad-input" data-index="3" value="1" readonly>
+                            <button class="incrementar" data-index="3">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Pipetas" data-edad="Senior">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia5_Pipeta_Perro_Power_Ultra_De_5_a_10kg.webp"
+                            alt="Pipeta Perro Power Ultra de 5 a 10 kg">
+                        <h3>Pipeta Perro Power Ultra de 5 a 10 kg</h3>
+                        <p>Bs. 45,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="4">-</button>
+                            <input type="text" class="cantidad-input" data-index="4" value="1" readonly>
+                            <button class="incrementar" data-index="4">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Pastillas" data-edad="Adulto">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia6_Pastilla_Simparica_40_a_60kg.webp"
+                            alt="Pastilla Simparica 40 a 60 kg">
+                        <h3>Pastilla Simparica 40 a 60 kg</h3>
+                        <p>Bs. 39,75</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="5">-</button>
+                            <input type="text" class="cantidad-input" data-index="5" value="1" readonly>
+                            <button class="incrementar" data-index="5">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Pastillas" data-edad="Senior">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia7_Pastilla_Simparica_20_a_40kg.webp"
+                            alt="Pastilla Simparica 20 a 40 kg">
+                        <h3>Pastilla Simparica 20 a 40 kg</h3>
+                        <p>Bs. 48,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="6">-</button>
+                            <input type="text" class="cantidad-input" data-index="6" value="1" readonly>
+                            <button class="incrementar" data-index="6">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Pastillas" data-edad="Adulto">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia8_Pastilla_Bravecto_10_a_20kg.webp"
+                            alt="Pastilla Bravecto 10 a 20 kg">
+                        <h3>Pastilla Bravecto 10 a 20 kg</h3>
+                        <p>Bs. 58,40</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="7">-</button>
+                            <input type="text" class="cantidad-input" data-index="7" value="1" readonly>
+                            <button class="incrementar" data-index="7">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto3" data-categoria="Pastillas" data-edad="Senior">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia9_Pastillas_Power_Gold_Hasta_10kg _3_Meses_Duración.webp"
+                            alt="Pastillas Power Gold Hasta 10 kg 3 Meses Duración">
+                        <h3>Pastillas Power Gold Hasta 10 kg 3 Meses Duración</h3>
+                        <p>Bs. 47,10</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="8">-</button>
+                            <input type="text" class="cantidad-input" data-index="8" value="1" readonly>
+                            <button class="incrementar" data-index="8">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Pastillas" data-edad="Adulto">
+                        <img src="imagenes/imagenes_farmacia_perros/Farmacia10_Pastilla_Bravecto_20_a_40kg.webp"
+                            alt="Pastilla Bravecto 20 a 40 kg">
+                        <h3>Pastilla Bravecto 20 a 40 kg</h3>
+                        <p>Bs. 45,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="9">-</button>
+                            <input type="text" class="cantidad-input" data-index="9" value="1" readonly>
+                            <button class="incrementar" data-index="9">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="parent">
+            <div class="div1">
+                <div class="info">
+                    <h3 class="footer-title">UBICACIÓN</h3>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. Busch y Tercer Anillo </p>
+                    </div>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. America esq. Av Pando </p>
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <div class="info">
+                    <h3 class="footer-title">CONTACTANOS</h3>
+                    <p>Atención Telefónica</p>
+                    <p>(591) 54488474</p>
+                </div>
+            </div>
+            <div class="div3">
+                <div class="info">
+                    <h3 class="footer-title ayuda-title">AYUDA</h3>
+                    <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+                    <a href="terminos_condiciones.html">Términos y condiciones</a>
+                    <a href="politica_privacidad.html">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="div4">
+                <p>SÍGUENOS EN:</p>
+                <div class="imagenes-redes-sociales">
+                    <a href="https://www.facebook.com/people/Pet-Shop-Huellitas/100063562781781/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-facebook-48.png" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/petshop_huellitas/" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/icons8-instagram-48.png" alt="instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@petshophuellita?is_from_webapp=1&sender_device=pc" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-tiktok-48.png" alt="tiktok">
+                    </a>
+                </div>
+            </div>
+            <div class="div5">
+                <p>© Pet Shop - 2025</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+
+</html>
